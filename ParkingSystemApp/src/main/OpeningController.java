@@ -22,7 +22,6 @@ public class OpeningController {
 
     @FXML
     void customerAccess(ActionEvent event) {
-    	
 		try {
 			Parent homePageParent = FXMLLoader.load(getClass().getResource("CustomerLogin.fxml"));
 			Scene homePageScene = new Scene(homePageParent);
@@ -33,12 +32,10 @@ public class OpeningController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
     }
     
     @FXML
     void officerAccess(ActionEvent event) {
-    	
 		try {
 			Parent homePageParent = FXMLLoader.load(getClass().getResource("OfficerLogin.fxml"));
 			Scene homePageScene = new Scene(homePageParent);
@@ -49,12 +46,10 @@ public class OpeningController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
     }
     
     @FXML
     void adminAccess(ActionEvent event) {
-    	
 		try {
 			Parent homePageParent = FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));
 			Scene homePageScene = new Scene(homePageParent);
@@ -65,8 +60,6 @@ public class OpeningController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
     }
-
 }
 

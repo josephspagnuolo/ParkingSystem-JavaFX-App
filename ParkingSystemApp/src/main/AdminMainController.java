@@ -54,5 +54,4 @@ public class AdminMainController {
 			e.printStackTrace();
 		}
     }
-
 }

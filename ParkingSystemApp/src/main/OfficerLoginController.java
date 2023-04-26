@@ -25,10 +25,8 @@ public class OfficerLoginController {
     
     @FXML
     void officerLogin(ActionEvent event) throws Exception {
-		
 		String path = "C:\\Users\\Joseph\\Desktop\\test2.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load2(path);
 		String email = officerEmailField.getText();
 		String id = officerIDField.getText();
@@ -71,5 +69,4 @@ public class OfficerLoginController {
 			e.printStackTrace();
 		}
     }
-
 }

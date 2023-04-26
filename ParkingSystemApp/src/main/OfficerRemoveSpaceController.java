@@ -41,7 +41,6 @@ public class OfficerRemoveSpaceController {
 		boolean numberExists = false;
 		String path = "C:\\Users\\Joseph\\Desktop\\test3.txt";
 		ParkingLot lot = new ParkingLot();
-	
 		lot.load(path);
 		String number = parkingSpaceNumberField.getText();
 		int temp = 0;
@@ -99,5 +98,4 @@ public class OfficerRemoveSpaceController {
 			e.printStackTrace();
 		}
     }
-
 }

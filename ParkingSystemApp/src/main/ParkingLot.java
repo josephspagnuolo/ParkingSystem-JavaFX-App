@@ -16,11 +16,9 @@ public class ParkingLot {
 		FileInputStream str = new FileInputStream(path);
 		BufferedReader br = new BufferedReader(new InputStreamReader(str));
 		String strline;
-		
 		while((strline = br.readLine()) != null) {
 			parkingSpaces.add(strline);
 		}
-		
 		for(int i = 0; i < parkingSpaces.size(); i+=2) {
 			ParkingSpace space = new ParkingSpace();
 			space.setSpaceNumber(parkingSpaces.get(i));
@@ -32,29 +30,26 @@ public class ParkingLot {
 			}
 			parkingLot.add(space);
 		}
-		
 		str.close();
 	}
 	
 	public void update(String path) throws Exception{
 		try {		
 			BufferedWriter br = new BufferedWriter(new FileWriter(path));
-				for(ParkingSpace p: parkingLot){
-					br.write(p.getSpaceNumber());
-					br.newLine();
-					if(p.isVacant()) {
-						br.write("Vacant");
-					}
-					else {
-						br.write("Occupied");
-					}
-					br.newLine();
+			for(ParkingSpace p: parkingLot){
+				br.write(p.getSpaceNumber());
+				br.newLine();
+				if(p.isVacant()) {
+					br.write("Vacant");
 				}
-				br.close();
-			
-			}catch (Exception e) {
-				e.printStackTrace();
+				else {
+					br.write("Occupied");
+				}
+				br.newLine();
 			}
+			br.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-
 }

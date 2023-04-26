@@ -29,7 +29,6 @@ public class AdminRemoveOfficerController {
 		boolean idExists = false;
 		String path = "C:\\Users\\Joseph\\Desktop\\test2.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load2(path);
 		String id = idField.getText();
 		int temp = 0;
@@ -79,5 +78,4 @@ public class AdminRemoveOfficerController {
 			e.printStackTrace();
 		}
     }
-
 }

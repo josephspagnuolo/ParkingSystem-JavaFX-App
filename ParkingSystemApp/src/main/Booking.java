@@ -63,7 +63,6 @@ public class Booking {
 	
 	@Override
 	public String toString() {
-		return "Booking [ID=" + BookingID + "] under email=" + email + " for parking space number " + parkingSpaceNumber + " expires at " + expiryTime + " and is " + paymentStatus;
+		return "Booking [ID = " + BookingID + ", email = " + email + "] for parking space number " + parkingSpaceNumber + " expires at " + expiryTime + " and is " + paymentStatus + ".";
 	}
-
 }

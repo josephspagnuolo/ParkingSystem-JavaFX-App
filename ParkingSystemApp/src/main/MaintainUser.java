@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MaintainUser {
+	
 	public ArrayList<User> users = new ArrayList<User>();
 	public ArrayList<User> officers = new ArrayList<User>();
 	public static User currentUser;
@@ -21,11 +22,9 @@ public class MaintainUser {
 		FileInputStream str = new FileInputStream(path);
 		BufferedReader br = new BufferedReader(new InputStreamReader(str));
 		String strline;
-		
 		while((strline = br.readLine()) != null) {
 			eachUser.add(strline);
 		}
-		
 		for(int i = 0; i < eachUser.size(); i+=4) {
 			User user = new User();
 			user.setFirstName(eachUser.get(i));
@@ -34,7 +33,6 @@ public class MaintainUser {
 			user.setPassword(eachUser.get(i+3));
 			users.add(user);
 		}
-		
 		str.close();
 	}
 	
@@ -43,11 +41,9 @@ public class MaintainUser {
 		FileInputStream str = new FileInputStream(path);
 		BufferedReader br = new BufferedReader(new InputStreamReader(str));
 		String strline;
-		
 		while((strline = br.readLine()) != null) {
 			eachOfficer.add(strline);
 		}
-		
 		for(int i = 0; i < eachOfficer.size(); i+=4) {
 			User officer = new User();
 			officer.setFirstName(eachOfficer.get(i));
@@ -56,48 +52,44 @@ public class MaintainUser {
 			officer.setPassword(eachOfficer.get(i+3));
 			officers.add(officer);
 		}
-		
 		str.close();
 	}
 	
 	public void update(String path) throws Exception{
 		try {		
 			BufferedWriter br = new BufferedWriter(new FileWriter(path));
-				for(User u: users){
-					br.write(u.getFirstName());
-					br.newLine();
-					br.write(u.getLastName());
-					br.newLine();
-					br.write(u.getEmail());
-					br.newLine();
-					br.write(u.getPassword());
-					br.newLine();
-				}
-				br.close();
-			
-			}catch (Exception e) {
-				e.printStackTrace();
+			for(User u: users){
+				br.write(u.getFirstName());
+				br.newLine();
+				br.write(u.getLastName());
+				br.newLine();
+				br.write(u.getEmail());
+				br.newLine();
+				br.write(u.getPassword());
+				br.newLine();
 			}
+			br.close();	
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void update2(String path) throws Exception{
 		try {		
 			BufferedWriter br = new BufferedWriter(new FileWriter(path));
-				for(User o: officers){
-					br.write(o.getFirstName());
-					br.newLine();
-					br.write(o.getLastName());
-					br.newLine();
-					br.write(o.getEmail());
-					br.newLine();
-					br.write(o.getPassword());
-					br.newLine();
-				}
-				br.close();
-			
-			}catch (Exception e) {
-				e.printStackTrace();
+			for(User o: officers){
+				br.write(o.getFirstName());
+				br.newLine();
+				br.write(o.getLastName());
+				br.newLine();
+				br.write(o.getEmail());
+				br.newLine();
+				br.write(o.getPassword());
+				br.newLine();
 			}
+			br.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	
 }

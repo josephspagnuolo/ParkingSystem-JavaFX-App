@@ -34,12 +34,10 @@ public class ParkingSpace {
 	@Override
 	public String toString() {
 		if(isVacant()) {
-			return "Parking Space [Number=" + spaceNumber + "] is vacant";
+			return "Parking Space [Number = " + spaceNumber + "] is vacant.";
 		}
 		else {
-			return "Parking Space [Number=" + spaceNumber + "] is occupied";
+			return "Parking Space [Number = " + spaceNumber + "] is occupied.";
 		}
-		
 	}
-
 }

@@ -24,11 +24,8 @@ public class CustomerLoginController {
     @FXML
     private Text invalid;
     
-    
-	
 	@FXML
     void customerRegister(ActionEvent event) {
-		
 		try {
 			Parent homePageParent = FXMLLoader.load(getClass().getResource("CustomerRegister.fxml"));
 			Scene homePageScene = new Scene(homePageParent);
@@ -39,15 +36,12 @@ public class CustomerLoginController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
     }
 	
 	@FXML
     void customerLogin(ActionEvent event) throws Exception {
-		
 		String path = "C:\\Users\\Joseph\\Desktop\\test.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load(path);
 		String email = emailField.getText();
 		String password = passwordField.getText();
@@ -95,5 +89,4 @@ public class CustomerLoginController {
 			e.printStackTrace();
 		}
     }
-	
 }

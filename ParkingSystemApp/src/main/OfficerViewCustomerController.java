@@ -31,7 +31,6 @@ public class OfficerViewCustomerController {
     	boolean exists1 = false;
     	String path = "C:\\Users\\Joseph\\Desktop\\test.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load(path);
 		String email = emailField.getText();
 		if(email.isEmpty()) {
@@ -44,7 +43,6 @@ public class OfficerViewCustomerController {
 				maintain.setCurrentUser(u);
 				String path2 = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 				MaintainBooking bookings = new MaintainBooking();
-			
 				bookings.load(path2);
 				int temp = 0;
 				for(Booking b: bookings.bookings) {
@@ -92,5 +90,4 @@ public class OfficerViewCustomerController {
 			e.printStackTrace();
 		}
     }
-
 }

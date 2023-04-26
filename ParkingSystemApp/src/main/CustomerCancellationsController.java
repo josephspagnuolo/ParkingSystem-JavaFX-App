@@ -29,7 +29,6 @@ public class CustomerCancellationsController {
 		boolean idExists = false;
 		String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking bookings = new MaintainBooking();
-	
 		bookings.load(path);
 		String id = idField.getText();
 		int temp = 0;
@@ -111,5 +110,4 @@ public class CustomerCancellationsController {
 			e.printStackTrace();
 		}
     }
-
 }

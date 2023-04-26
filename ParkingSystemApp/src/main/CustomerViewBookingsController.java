@@ -90,5 +90,4 @@ public class CustomerViewBookingsController {
 			e.printStackTrace();
 		}
     }
-
 }

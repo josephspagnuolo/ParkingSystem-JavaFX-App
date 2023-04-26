@@ -45,7 +45,6 @@ public class AdminChangePaymentController {
 		booked.setVisible(false);
 		String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking bookings = new MaintainBooking();
-	
 		bookings.load(path);
 		String first = firstNameField.getText();
 		String last = lastNameField.getText();
@@ -53,9 +52,7 @@ public class AdminChangePaymentController {
 		String parkingSpaceNumber = parkingSpaceNumberField.getText();
 		String path2 = "C:\\Users\\Joseph\\Desktop\\test.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load(path2);
-		
 		boolean customerExists = false;
 		boolean bookingExists = false;
 		boolean verified = false;

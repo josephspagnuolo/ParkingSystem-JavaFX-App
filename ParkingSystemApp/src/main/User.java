@@ -19,7 +19,6 @@ public class User {
 		super();
 	}
 	
-
 	public String getFirstName() {
 		return firstName;
 	}
@@ -54,8 +53,6 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [first name=" + firstName + ", last name=" + lastName + ", email=" + email + ", password=" + password + "]";
+		return "User [first name = " + firstName + ", last name = " + lastName + ", email = " + email + ", password = " + password + "]";
 	}
-	
-
 }

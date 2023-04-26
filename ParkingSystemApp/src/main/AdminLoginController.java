@@ -42,7 +42,6 @@ public class AdminLoginController {
     	else {
     		invalid.setVisible(true);
     	}
-
     }
     
     @FXML
@@ -58,5 +57,4 @@ public class AdminLoginController {
 			e.printStackTrace();
 		}
     }
-
 }

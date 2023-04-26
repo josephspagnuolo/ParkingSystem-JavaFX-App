@@ -31,10 +31,8 @@ public class OfficerAddSpaceController {
 		exists.setVisible(false);
     	empty.setVisible(false);
     	boolean spaceExists = false;
-    	
     	String path = "C:\\Users\\Joseph\\Desktop\\test3.txt";
 		ParkingLot lot = new ParkingLot();
-	
 		lot.load(path);
 		String number = parkingSpaceNumberField.getText();
 		if(number.isEmpty()) {
@@ -85,5 +83,4 @@ public class OfficerAddSpaceController {
 			e.printStackTrace();
 		}
     }
-
 }

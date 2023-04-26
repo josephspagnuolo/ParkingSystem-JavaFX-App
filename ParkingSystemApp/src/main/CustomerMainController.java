@@ -35,7 +35,6 @@ public class CustomerMainController {
 		welcome.setText("Welcome, " + MaintainUser.currentUser.getFirstName() + "!");
 		String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking bookings = new MaintainBooking();
-	
 		bookings.load(path);
 		int temp = 0;
 		for(Booking b: bookings.bookings) {
@@ -57,7 +56,6 @@ public class CustomerMainController {
     void customerBookSpace(ActionEvent event) throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking bookings = new MaintainBooking();
-	
 		bookings.load(path);
 		int temp = 0;
 		for(Booking b: bookings.bookings) {
@@ -83,7 +81,6 @@ public class CustomerMainController {
 				e.printStackTrace();
 			}
 		}
-		
 	}
 	
 	@FXML
@@ -155,5 +152,4 @@ public class CustomerMainController {
 			e.printStackTrace();
 		}
     }
-
 }

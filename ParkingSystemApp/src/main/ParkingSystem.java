@@ -19,45 +19,36 @@ import javafx.stage.WindowEvent;
 public class ParkingSystem extends Application {
 
 	public void start(Stage primaryStage) {
-		
 		try {
-
-		Parent root = FXMLLoader.load(getClass().getResource("Opening.fxml"));
-
-		Scene scene = new Scene(root);
-		primaryStage.setScene(scene);
-		primaryStage.initStyle(StageStyle.UTILITY);
-		primaryStage.setResizable(false);
-		primaryStage.show();
-		Platform.setImplicitExit(false);
-
-		primaryStage.setOnCloseRequest((EventHandler<WindowEvent>) new EventHandler<WindowEvent>() {
-			@Override
-			public void handle(WindowEvent t) {
-
-				Alert alert = new Alert(AlertType.CONFIRMATION);
-				alert.initStyle(StageStyle.UNDECORATED);
-				alert.setHeaderText("Are you sure you want exit?");
-
-				Optional<ButtonType> result = alert.showAndWait();
-				if (result.get() == ButtonType.OK) {
-
-					System.exit(0);
-
-				} else {
-
-					t.consume();
+			Parent root = FXMLLoader.load(getClass().getResource("Opening.fxml"));
+			Scene scene = new Scene(root);
+			primaryStage.setScene(scene);
+			primaryStage.initStyle(StageStyle.DECORATED);
+			primaryStage.setTitle("Parking System");
+			primaryStage.setResizable(false);
+			primaryStage.show();
+			Platform.setImplicitExit(false);
+			primaryStage.setOnCloseRequest((EventHandler<WindowEvent>) new EventHandler<WindowEvent>() {
+				@Override
+				public void handle(WindowEvent t) {
+					Alert alert = new Alert(AlertType.CONFIRMATION);
+					alert.initStyle(StageStyle.UNDECORATED);
+					alert.setHeaderText("Are you sure you want exit?");
+					Optional<ButtonType> result = alert.showAndWait();
+					if (result.get() == ButtonType.OK) {
+						System.exit(0);
+					} 
+					else {
+						t.consume();
+					}
 				}
-
-			}
-		});
-
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-}
-		
-		public static void main(String[] args) {
-			launch(args);
+			});
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+	}
+		
+	public static void main(String[] args) {
+		launch(args);
+	}
 }

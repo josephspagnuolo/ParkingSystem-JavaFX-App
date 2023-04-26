@@ -17,7 +17,6 @@ import javafx.stage.StageStyle;
 
 public class CustomerBookSpaceController {
 	
-	
 	@FXML
     private TextField bookingTimeField;
 
@@ -42,15 +41,12 @@ public class CustomerBookSpaceController {
     	empty.setVisible(false);
     	occupied.setVisible(false);
     	boolean spaceExists = false;
-    	
     	String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking bookings = new MaintainBooking();
-	
 		bookings.load(path);
     	String space = parkingSpaceNumberField.getText();
 		String time = bookingTimeField.getText();
 		String license = licensePlateNumberField.getText();
-		
 		if(space.isEmpty() || time.isEmpty() || license.isEmpty()) {
 			empty.setVisible(true);
 		}
@@ -81,7 +77,6 @@ public class CustomerBookSpaceController {
 										id2.incID();
 									}
 								}
-								
 							}
 							Booking newBooking = new Booking("" + id2.getID(),MaintainUser.currentUser.email,space,time,"Unpaid");
 							id2.incID();
@@ -129,5 +124,4 @@ public class CustomerBookSpaceController {
 			e.printStackTrace();
 		}
     }
-
 }

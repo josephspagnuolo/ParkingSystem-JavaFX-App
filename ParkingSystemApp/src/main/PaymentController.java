@@ -67,7 +67,6 @@ public class PaymentController {
     private Button confirm;
     
     public int totalInt = 0;
-    
     public boolean[] bool = new boolean[3];
     
     @FXML
@@ -178,16 +177,6 @@ public class PaymentController {
     		tot.setVisible(false);
     		total.setVisible(false);
         	empty.setVisible(false);
-//    		try {
-//    			Parent homePageParent = FXMLLoader.load(getClass().getResource("Checkout.fxml"));
-//    			Scene homePageScene = new Scene(homePageParent);
-//    			Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//    			appStage.setScene(homePageScene);
-//    			appStage.centerOnScreen();
-//    			appStage.show();
-//    		} catch (IOException e) {
-//    			e.printStackTrace();
-//    		}
     	}
     }
     
@@ -306,6 +295,7 @@ public class PaymentController {
         	nameField.setVisible(false);
     		detailField1.setVisible(false);
     		detailField2.setVisible(false);
+    		paypalPassword.setVisible(false);
         	total.setText("$ 0.00");
         	String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
     		MaintainBooking bookings = new MaintainBooking();
@@ -348,5 +338,4 @@ public class PaymentController {
     		}
     	}
     }
-
 }

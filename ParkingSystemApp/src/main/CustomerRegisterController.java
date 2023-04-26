@@ -35,21 +35,16 @@ public class CustomerRegisterController {
     
     @FXML
     void customerRegister(ActionEvent event) throws Exception {
-    	
     	exists.setVisible(false);
     	empty.setVisible(false);
     	boolean emailExists = false;
-    	
     	String path = "C:\\Users\\Joseph\\Desktop\\test.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load(path);
-		
 		String first = firstNameField.getText();
 		String last = lastNameField.getText();
 		String email = emailField.getText();
 		String password = passwordField.getText();
-		
 		if(first.isEmpty() || last.isEmpty() || email.isEmpty() || password.isEmpty()) {
 			empty.setVisible(true);
 		}
@@ -95,5 +90,4 @@ public class CustomerRegisterController {
 			e.printStackTrace();
 		}
     }
-
 }

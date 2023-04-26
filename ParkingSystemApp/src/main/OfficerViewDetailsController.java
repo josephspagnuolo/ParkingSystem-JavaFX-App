@@ -48,7 +48,6 @@ public class OfficerViewDetailsController {
     
     @FXML
     void selection(ActionEvent event) throws Exception {
-    	
     	String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking bookings = new MaintainBooking();
 		bookings.load(path);
@@ -78,5 +77,4 @@ public class OfficerViewDetailsController {
 			e.printStackTrace();
 		}
     }
-
 }

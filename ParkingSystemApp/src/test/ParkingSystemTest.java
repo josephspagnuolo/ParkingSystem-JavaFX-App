@@ -18,7 +18,6 @@ public class ParkingSystemTest {
 	public void test1() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test2.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load2(path);
 		assertEquals(maintain.officers.size(), 1);
 	}
@@ -27,7 +26,6 @@ public class ParkingSystemTest {
 	public void test2() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load(path);
 		assertEquals(maintain.users.size(), 2);
 	}
@@ -36,7 +34,6 @@ public class ParkingSystemTest {
 	public void test3() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load(path);
 		User newUser = new User("first","last","email","password");
 		maintain.users.add(newUser);
@@ -48,7 +45,6 @@ public class ParkingSystemTest {
 	public void test4() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test2.txt";
 		MaintainUser maintain = new MaintainUser();
-	
 		maintain.load2(path);
 		User newOfficer = new User("first","last","email","password");
 		maintain.officers.add(newOfficer);
@@ -61,7 +57,6 @@ public class ParkingSystemTest {
 	public void test5() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test3.txt";
 		ParkingLot maintain = new ParkingLot();
-	
 		maintain.load(path);
 		assertEquals(maintain.parkingLot.size(), 4);
 	}
@@ -70,7 +65,6 @@ public class ParkingSystemTest {
 	public void test6() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking maintain = new MaintainBooking();
-	
 		maintain.load(path);
 		assertEquals(maintain.bookings.size(), 1);
 	}
@@ -79,7 +73,6 @@ public class ParkingSystemTest {
 	public void test7() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test3.txt";
 		ParkingLot maintain = new ParkingLot();
-	
 		maintain.load(path);
 		ParkingSpace newUser = new ParkingSpace(true,"5");
 		maintain.parkingLot.add(newUser);
@@ -94,9 +87,8 @@ public class ParkingSystemTest {
 	public void test8() throws Exception {
 		String path = "C:\\Users\\Joseph\\Desktop\\test4.txt";
 		MaintainBooking maintain = new MaintainBooking();
-	
 		maintain.load(path);
-		Booking newOfficer = new Booking("1000000","email","1","12:00","paid");
+		Booking newOfficer = new Booking("1000000","email","1","12:00AM","Paid");
 		maintain.bookings.add(newOfficer);
 		maintain.update(path);
 		newOfficer.toString();
@@ -105,5 +97,4 @@ public class ParkingSystemTest {
 		int temp = id2.getID();
 		assertEquals(maintain.bookings.size(), 2);
 	}
-
 }
